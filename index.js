@@ -11,9 +11,6 @@ const client = new Client({
 
 require('dotenv').config();
 
-
-client.on('ready', async () => {});
-
 client.on('messageCreate', async (message) => {
   if (message.content.toLowerCase().includes('nitro') || message.content.toLowerCase().includes('gift')  || message.content.toLowerCase().includes('gifts'))
       message.delete()
