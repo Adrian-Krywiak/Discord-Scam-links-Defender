@@ -15,11 +15,11 @@ require('dotenv').config();
 client.on('ready', async () => {});
 
 client.on('message', async (message) => {
-  if (message.content.toLowerCase().includes('nitro') || message.content.toLowerCase().includes('gift'))
+  if (message.content.toLowerCase().includes('nitro') || message.content.toLowerCase().includes('gift')  || message.content.toLowerCase().includes('gifts'))
       message.delete()
   else {
       for (var i = 0; i < message.embeds.length; i++) {
-          if (message.embeds[i].title.toLowerCase().includes("discord") || message.embeds[i].title.toLowerCase().includes("nitro") || message.embeds[i].title.toLowerCase().includes("gift") || message.embeds[i].description.toLowerCase().includes("discord") || message.embeds[i].description.toLowerCase().includes("nitro") || message.embeds[i].description.toLowerCase().includes("gift")) {
+          if (message.embeds[i].title.toLowerCase().includes("discord") || message.embeds[i].title.toLowerCase().includes("nitro") || message.embeds[i].title.toLowerCase().includes("gift") || message.embeds[i].title.toLowerCase().includes("gifts") || message.embeds[i].description.toLowerCase().includes("discord") || message.embeds[i].description.toLowerCase().includes("nitro") || message.embeds[i].description.toLowerCase().includes("gift") || message.embeds[i].description.toLowerCase().includes("gifts")) {
               message.delete()
               break;
           }
